@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: bhajan-app
-          image: bhajan-app:1.0
+          image: bhajan-flask:1.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 1234
