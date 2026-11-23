@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: bhajan-app
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: bhajan-app
+
+  template:
+    metadata:
+      labels:
+        app: bhajan-app
+
+    spec:
+      containers:
+        - name: bhajan-app
+          image: bhajan-app:1.0
+          ports:
+            - containerPort: 1234
